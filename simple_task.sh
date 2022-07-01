@@ -38,5 +38,7 @@ openssl rsa -pubout -in privatekey.pem -out publickey.pem 2> /dev/null
 
 publickey=`cat publickey.pem`
 
+echo "what is the name of app for the token?"
 
-echo "bundle exec rake mauth:new_security_token[pls_work,'$publickey',$uuid]"
+read appName
+echo "bundle exec rake mauth:new_security_token[$appName,'$publickey',$uuid]"
