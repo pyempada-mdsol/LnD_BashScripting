@@ -39,5 +39,4 @@ openssl rsa -pubout -in privatekey.pem -out publickey.pem 2> /dev/null
 publickey=`cat publickey.pem`
 
 
-echo "bundle exec rake mauth:new_security_token[pls_work,'$publickey',$uuid]" >> test.txt
-
+echo "bundle exec rake mauth:new_security_token[pls_work,'$publickey',$uuid]"
