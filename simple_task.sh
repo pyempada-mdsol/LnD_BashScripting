@@ -6,8 +6,8 @@ read appName
 #updated this code for make it simple approach
 #because the old approach is not universally unique random it is mostly server specific unique
 
-newuuid=`curl -X GET https://www.uuidtools.com/api/generate/v1` 2> /dev/null
-uuid=`echo $newuuid | sed 's/[^a-zA-Z0-9-]//g'1` 
+newuuid=`curl -X GET https://www.uuidtools.com/api/generate/v1 2> /dev/null`
+uuid=`echo $newuuid | sed 's/[^a-zA-Z0-9-]//g'` 
 
 echo $uuid
 
